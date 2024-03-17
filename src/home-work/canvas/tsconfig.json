@@ -1,0 +1,16 @@
+{
+  "display": "Configuration for Graphics Programming in PAI",
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "rootDir": "./",
+    "outDir": "./",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*.ts", "./*.ts"],
+  "exclude": ["node_modules"]
+
+}
