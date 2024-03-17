@@ -43,6 +43,7 @@ export class View {
     /**
      * Draws the function in the canvas
      */
-    drawFunction() {
+    drawFunction(functionToDraw) {
+        functionToDraw.draw(View.context);
     }
 }

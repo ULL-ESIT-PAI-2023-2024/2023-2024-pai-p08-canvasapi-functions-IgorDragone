@@ -11,6 +11,7 @@
 
 import { Axis } from './axis.js';
 import { Grid } from './grid.js';
+import { Function } from '../functions/function.js';
 
 /**
  * Class for representing the canvas view
@@ -46,6 +47,7 @@ export class View {
   /**
    * Draws the function in the canvas
    */
-  drawFunction(): void {
+  drawFunction(functionToDraw: Function): void {
+    functionToDraw.draw(View.context);
   }
 }

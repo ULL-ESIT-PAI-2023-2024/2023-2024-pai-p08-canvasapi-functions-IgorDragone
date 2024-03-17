@@ -32,6 +32,10 @@ export class Grid {
         this.drawHorizontalLines(context);
         this.drawVerticalLines(context);
     }
+    /**
+     * Draws the vertical lines in the canvas
+     * @param context context of the canvas
+     */
     drawVerticalLines(context) {
         const HALF_WIDTH = context.canvas.width / 2;
         for (let i = HALF_WIDTH; i < context.canvas.width; i += this.scale) {
@@ -47,6 +51,10 @@ export class Grid {
             context.stroke();
         }
     }
+    /**
+     * Draws the horizontal lines in the canvas
+     * @param context context of the canvas
+     */
     drawHorizontalLines(context) {
         const HALF_HEIGHT = context.canvas.height / 2;
         for (let i = HALF_HEIGHT; i < context.canvas.height; i += this.scale) {
