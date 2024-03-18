@@ -23,7 +23,7 @@ export class Grid {
   /**
    * Draws the grid in the canvas
    */
-  draw(context: CanvasRenderingContext2D): void {
+  drawGrid(context: CanvasRenderingContext2D): void {
     const STROKE_STYLE = 'lightgray';
     const LINE_WIDTH = 0.5;
 

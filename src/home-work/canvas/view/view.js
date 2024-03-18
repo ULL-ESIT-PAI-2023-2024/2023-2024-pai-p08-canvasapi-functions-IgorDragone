@@ -30,7 +30,7 @@ export class View {
      */
     drawGrid() {
         const grid = new Grid(this.scale);
-        grid.draw(View.context);
+        grid.drawGrid(View.context);
     }
     /**
      * Draws the axis in the canvas

@@ -32,7 +32,7 @@ export class View {
    */
   drawGrid(): void {
     const grid: Grid = new Grid(this.scale);
-    grid.draw(View.context);
+    grid.drawGrid(View.context);
   }
 
   /**

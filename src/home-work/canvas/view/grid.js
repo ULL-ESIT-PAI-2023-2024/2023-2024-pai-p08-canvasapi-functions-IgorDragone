@@ -24,7 +24,7 @@ export class Grid {
     /**
      * Draws the grid in the canvas
      */
-    draw(context) {
+    drawGrid(context) {
         const STROKE_STYLE = 'lightgray';
         const LINE_WIDTH = 0.5;
         context.strokeStyle = STROKE_STYLE;
