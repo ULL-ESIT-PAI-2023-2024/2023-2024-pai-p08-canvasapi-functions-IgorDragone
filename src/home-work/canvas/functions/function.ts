@@ -34,14 +34,15 @@ export abstract class Function implements Drawable {
     context.strokeStyle = STROKE_STYLE;
     context.lineWidth = LINE_WIDTH;
 
-    const halfHeight = context.canvas.height / 2;
-    const halfWidth = context.canvas.width / 2;
+    const halfHeightOfCanvas = context.canvas.height / 2;
+    const halfWidthOfCanvas = context.canvas.width / 2;
 
     context.beginPath();
-    for (let i = -halfWidth; i < halfWidth; i++) {
-      const xValue = i / scale;  // From pixel to unit
+    for (let xPositionInCanvas = 0; xPositionInCanvas < context.canvas.width; xPositionInCanvas++) {
+      const xValue = (xPositionInCanvas - halfWidthOfCanvas) / scale;  // From pixel to unit
       const yValue = this.evaluate(xValue);
-      context.lineTo(halfWidth + i, halfHeight - yValue * scale);
+      const yPositionInCanvas = halfHeightOfCanvas - yValue * scale;
+      context.lineTo(xPositionInCanvas, yPositionInCanvas);
     }
     context.stroke();
   }

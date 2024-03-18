@@ -20,10 +20,16 @@ export class Function {
         const halfHeight = context.canvas.height / 2;
         const halfWidth = context.canvas.width / 2;
         context.beginPath();
-        for (let i = -halfWidth; i < halfWidth; i++) {
-            const xValue = i / scale; // From pixel to unit
+        // for (let i = -halfWidth; i < halfWidth; i++) {
+        //   const xValue = i / scale;  // From pixel to unit
+        //   const yValue = this.evaluate(xValue);
+        //   context.lineTo(halfWidth + i, halfHeight - yValue * scale);
+        // }
+        for (let xPositionInPixels = 0; xPositionInPixels < context.canvas.width; xPositionInPixels++) {
+            const xValue = (xPositionInPixels - halfWidth) / scale; // From pixel to unit
             const yValue = this.evaluate(xValue);
-            context.lineTo(halfWidth + i, halfHeight - yValue * scale);
+            const yPositionInPixels = halfHeight - yValue * scale;
+            context.lineTo(xPositionInPixels, yPositionInPixels);
         }
         context.stroke();
     }

@@ -38,13 +38,13 @@ export class View {
     drawAxis() {
         const axis = new Axis(this.scale);
         axis.drawAxis(View.context);
-        axis.drawNumbers(View.context);
+        axis.drawNumbersInAxis(View.context);
     }
     /**
      * Draws the function in the canvas
      * @param functionsToDraw The functions to draw
      */
-    drawFunction(functionsToDraw) {
+    drawFunctions(functionsToDraw) {
         for (let functionToDraw of functionsToDraw) {
             functionToDraw.draw(View.context, this.scale);
         }

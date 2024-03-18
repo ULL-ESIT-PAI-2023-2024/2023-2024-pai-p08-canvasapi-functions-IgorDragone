@@ -28,6 +28,6 @@ export function main() {
     functions.push(new LogarithmicFunction);
     functions.push(new SinFunction);
     functions.push(new CosFunction);
-    view.drawFunction(functions);
+    view.drawFunctions(functions);
 }
 main();

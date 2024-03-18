@@ -40,7 +40,7 @@ export class Axis {
     /**
      * Draws the numbers in the axis
      */
-    drawNumbers(context) {
+    drawNumbersInAxis(context) {
         const FONT = '10px Arial';
         const FILL_STYLE = 'black';
         const TEXT_ALIGN = 'center';
