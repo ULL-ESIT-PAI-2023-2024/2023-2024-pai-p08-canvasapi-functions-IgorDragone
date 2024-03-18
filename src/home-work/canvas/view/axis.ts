@@ -42,7 +42,7 @@ export class Axis {
   /**
    * Draws the numbers in the axis
    */
-  drawNumbers(context: CanvasRenderingContext2D): void {
+  drawNumbersInAxis(context: CanvasRenderingContext2D): void {
     const FONT = '10px Arial';
     const FILL_STYLE = 'black';
     const TEXT_ALIGN = 'center';

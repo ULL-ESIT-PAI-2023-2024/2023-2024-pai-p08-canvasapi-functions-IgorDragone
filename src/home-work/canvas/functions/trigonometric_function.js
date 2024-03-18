@@ -14,13 +14,6 @@ import { Function } from "./function.js";
  */
 export class SinFunction extends Function {
     /**
-     * Constructor for the sin function
-     * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-     */
-    constructor(scale) {
-        super(scale);
-    }
-    /**
      * Evaluates the function in a given point
      */
     evaluate(point) {
@@ -31,13 +24,6 @@ export class SinFunction extends Function {
  * Class for representing a cos function
  */
 export class CosFunction extends Function {
-    /**
-     * Constructor for the cos function
-     * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-     */
-    constructor(scale) {
-        super(scale);
-    }
     /**
      * Evaluates the function in a given point
      */

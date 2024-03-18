@@ -16,14 +16,6 @@ import { Function } from "./function.js";
  */
 export class ExponentialFunction extends Function {
   /**
-   * Constructor for the exponential function. This is, e^x
-   * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-   */
-  constructor(scale: number) {
-    super(scale);
-  }
-
-  /**
    * Evaluates the function in a given point
    */
   evaluate(point: number): number {

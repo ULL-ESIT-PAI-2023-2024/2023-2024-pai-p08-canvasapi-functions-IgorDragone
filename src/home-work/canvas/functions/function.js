@@ -9,18 +9,10 @@
  * @desc Interface for a function
  */
 export class Function {
-    scale;
-    /**
-     * Constructor for the function
-     * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-     */
-    constructor(scale) {
-        this.scale = scale;
-    }
     /**
      * Draws the function in the canvas
      */
-    draw(context) {
+    draw(context, scale) {
         const STROKE_STYLE = 'red';
         const LINE_WIDTH = 1;
         context.strokeStyle = STROKE_STYLE;
@@ -29,9 +21,9 @@ export class Function {
         const halfWidth = context.canvas.width / 2;
         context.beginPath();
         for (let i = -halfWidth; i < halfWidth; i++) {
-            const x = i;
-            const y = this.evaluate(i / this.scale) * this.scale;
-            context.lineTo(halfWidth + x, halfHeight - y);
+            const xValue = i / scale; // From pixel to unit
+            const yValue = this.evaluate(xValue);
+            context.lineTo(halfWidth + i, halfHeight - yValue * scale);
         }
         context.stroke();
     }

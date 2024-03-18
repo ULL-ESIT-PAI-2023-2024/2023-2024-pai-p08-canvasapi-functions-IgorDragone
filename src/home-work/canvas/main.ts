@@ -10,11 +10,12 @@
  */
 
 import { View } from './view/view.js';
+import { Function } from './functions/function.js';
 import { LinealFunction } from './functions/lineal_function.js';
 import { QuadraticFunction } from './functions/quadratic_function.js';
 import { ExponentialFunction } from './functions/exponential_function.js';
 import { SquareRootFunction } from './functions/square_root.js';
-import { LogarithmicFunction } from './functions/logartitmic_function.js';import { log } from 'console';
+import { LogarithmicFunction } from './functions/logartitmic_function.js';
 import { SinFunction, CosFunction } from './functions/trigonometric_function.js';
 
 
@@ -24,15 +25,15 @@ export function main(): void {
   view.drawGrid();
   view.drawAxis();
 
-  // let linealFunction: LinealFunction = new LinealFunction(scale, 3, 2);
-  // let quadraticFunction: QuadraticFunction = new QuadraticFunction(scale, 1, 0, 0);
-  let exponentialFunction: ExponentialFunction = new ExponentialFunction(scale);
-  // let squareRootFunction: SquareRootFunction = new SquareRootFunction(scale);
-  // let logarithmicFunction: LogarithmicFunction = new LogarithmicFunction(scale);
-  // let sinFunction: SinFunction = new SinFunction(scale);
-  // let cosFunction: CosFunction = new CosFunction(scale);
-
-  view.drawFunction(exponentialFunction);
+  let functions: Function[] = [];
+  // functions.push(new LinealFunction(3, 2));
+  // functions.push(new QuadraticFunction(1, 0, 0));
+  // functions.push(new ExponentialFunction);
+  // functions.push(new SquareRootFunction);
+  // functions.push(new LogarithmicFunction);
+  // functions.push(new SinFunction);
+  // functions.push(new CosFunction);
+  view.drawFunctions(functions);
 }
 
 main();

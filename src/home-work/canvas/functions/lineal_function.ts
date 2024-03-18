@@ -17,12 +17,11 @@ import { Function } from "./function.js";
 export class LinealFunction extends Function {
   /**
    * Constructor for the lineal function
-   * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
    * @param slope The slope of the lineal function, this is the number that multiplies the x in the lineal function
    * @param yIntercept The y intercept of the lineal function, this is the number that adds to the result of the slope multiplied by x
    */
-  constructor(scale: number, private slope: number = 1, private yIntercept: number = 0) {
-    super(scale);
+  constructor(private slope: number = 1, private yIntercept: number = 0) {
+    super();
   }
 
   /**

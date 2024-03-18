@@ -42,8 +42,11 @@ export class View {
     }
     /**
      * Draws the function in the canvas
+     * @param functionsToDraw The functions to draw
      */
-    drawFunction(functionToDraw) {
-        functionToDraw.draw(View.context);
+    drawFunction(functionsToDraw) {
+        for (let functionToDraw of functionsToDraw) {
+            functionToDraw.draw(View.context, this.scale);
+        }
     }
 }

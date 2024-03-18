@@ -16,14 +16,6 @@ import { Function } from "./function.js";
  */
 export class LogarithmicFunction extends Function {
   /**
-   * Constructor for the neperian logarithmic function
-   * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-   */
-  constructor(scale: number) {
-    super(scale);
-  }
-
-  /**
    * Evaluates the function in a given point
    */
   evaluate(point: number): number {

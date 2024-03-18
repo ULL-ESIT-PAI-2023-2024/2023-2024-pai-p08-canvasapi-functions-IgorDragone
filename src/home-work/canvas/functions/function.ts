@@ -16,16 +16,10 @@ interface Drawable {
   /**
    * Draws the object in the canvas
    */
-  draw(context: CanvasRenderingContext2D): void;
+  draw(context: CanvasRenderingContext2D, scale: number): void;
 }
 
 export abstract class Function implements Drawable {
-  /**
-   * Constructor for the function
-   * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
-   */
-  constructor(protected scale: number) {}
-
   /**
    * Draws the function in the canvas
    */
@@ -34,7 +28,7 @@ export abstract class Function implements Drawable {
   /**
    * Draws the function in the canvas
    */
-  draw(context: CanvasRenderingContext2D): void {
+  draw(context: CanvasRenderingContext2D, scale: number): void {
     const STROKE_STYLE = 'red';
     const LINE_WIDTH = 1;
     context.strokeStyle = STROKE_STYLE;
@@ -45,9 +39,9 @@ export abstract class Function implements Drawable {
 
     context.beginPath();
     for (let i = -halfWidth; i < halfWidth; i++) {
-      const x = i;
-      const y = this.evaluate(i / this.scale) *  this.scale;
-      context.lineTo(halfWidth + x, halfHeight - y);
+      const xValue = i / scale;  // From pixel to unit
+      const yValue = this.evaluate(xValue);
+      context.lineTo(halfWidth + i, halfHeight - yValue * scale);
     }
     context.stroke();
   }

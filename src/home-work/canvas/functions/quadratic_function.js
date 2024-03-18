@@ -18,13 +18,12 @@ export class QuadraticFunction extends Function {
     independentTerm;
     /**
      * Constructor for the cuadratic function
-     * @param scale The scale of the canvas, this is, the number of pixels that represent a unit in the canvas
      * @param coefficientOfCuadraticTerm The coefficient of the cuadratic term in the cuadratic function
      * @param coefficientOfLinearTerm The coefficient of the linear term in the cuadratic function
      * @param independentTerm The independent term in the cuadratic function
      */
-    constructor(scale, coefficientOfCuadraticTerm, coefficientOfLinearTerm = 0, independentTerm = 0) {
-        super(scale);
+    constructor(coefficientOfCuadraticTerm, coefficientOfLinearTerm = 0, independentTerm = 0) {
+        super();
         this.coefficientOfCuadraticTerm = coefficientOfCuadraticTerm;
         this.coefficientOfLinearTerm = coefficientOfLinearTerm;
         this.independentTerm = independentTerm;
