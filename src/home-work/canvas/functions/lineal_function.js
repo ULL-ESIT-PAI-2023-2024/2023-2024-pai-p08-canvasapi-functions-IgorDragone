@@ -31,4 +31,12 @@ export class LinealFunction extends Function {
     evaluate(point) {
         return this.slope * point + this.yIntercept;
     }
+    /**
+     * Calculates the derivative of the function
+     * @param grade grade of the derivative
+     * @returns the derivative of the function
+     */
+    derivative(grade) {
+        return new LinealFunction(this.slope);
+    }
 }

@@ -31,4 +31,20 @@ export class QuadraticFunction extends Function {
   evaluate(point: number): number {
     return this.coefficientOfCuadraticTerm * Math.pow(point, 2) + this.coefficientOfLinearTerm * point + this.independentTerm;
   }
+
+  /**
+   * Calculates the derivative of the function
+   * @param grade grade of the derivative
+   * @returns the derivative of the function
+   */
+  derivative(grade: number): Function {
+    // if (grade === 0) {
+    //   return this;
+    // } else if (grade === 1) {
+    //   return new LinealFunction(2 * this.coefficientOfCuadraticTerm, this.coefficientOfLinearTerm);
+    // } else {
+    //   return new ConstantFunction(2 * this.coefficientOfCuadraticTerm);
+    // }
+    return new QuadraticFunction(2 * this.coefficientOfCuadraticTerm, this.coefficientOfLinearTerm);
+  }
 }

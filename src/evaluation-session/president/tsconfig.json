@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./",
+    "strict": true,
+    //"types": ["jest"],
+    "esModuleInterop": true
+  },
+  "files" : ["main.ts", "president.ts"],
+  "exclude": ["node_modules"]
+}

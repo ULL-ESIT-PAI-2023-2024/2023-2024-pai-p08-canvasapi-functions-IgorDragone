@@ -28,17 +28,12 @@ export class View {
   constructor(private scale: number = 30) {}
 
   /**
-   * Draws the grid in the canvas
+   * Draws the grid and the axis in the canvas
    */
-  drawGrid(): void {
+  drawView(): void {
     const grid: Grid = new Grid(this.scale);
     grid.drawGrid(View.context);
-  }
 
-  /**
-   * Draws the axis in the canvas
-   */
-  drawAxis(): void {
     const axis: Axis = new Axis(this.scale);
     axis.drawAxis(View.context);
     axis.drawNumbersInAxis(View.context);

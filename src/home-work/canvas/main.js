@@ -9,25 +9,20 @@
  * @desc Client code
  */
 import { View } from './view/view.js';
-import { LinealFunction } from './functions/lineal_function.js';
-import { QuadraticFunction } from './functions/quadratic_function.js';
 import { ExponentialFunction } from './functions/exponential_function.js';
-import { SquareRootFunction } from './functions/square_root.js';
-import { LogarithmicFunction } from './functions/logartitmic_function.js';
-import { SinFunction, CosFunction } from './functions/trigonometric_function.js';
+import { TaylorPolynomialApproximation } from './functions/taylor_polynomial.js';
 export function main() {
-    let scale = 30;
+    let scale = 50;
     const view = new View(scale);
-    view.drawGrid();
-    view.drawAxis();
+    view.drawView();
     let functions = [];
-    functions.push(new LinealFunction(3, 2));
-    functions.push(new QuadraticFunction(1, 0, 0));
-    functions.push(new ExponentialFunction);
-    functions.push(new SquareRootFunction);
-    functions.push(new LogarithmicFunction);
-    functions.push(new SinFunction);
-    functions.push(new CosFunction);
+    // let sinFunction: SinFunction =  new SinFunction;
+    // functions.push(sinFunction);
+    let exponentialFunction = new ExponentialFunction;
+    functions.push(exponentialFunction);
+    const TAYLOR_POLYNOMIAL_GRADE = 14;
+    let taylorPolynomial = new TaylorPolynomialApproximation(TAYLOR_POLYNOMIAL_GRADE, exponentialFunction);
+    functions.push(taylorPolynomial);
     view.drawFunctions(functions);
 }
 main();

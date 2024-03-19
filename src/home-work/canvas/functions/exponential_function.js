@@ -19,4 +19,12 @@ export class ExponentialFunction extends Function {
     evaluate(point) {
         return Math.exp(point);
     }
+    /**
+     * Calculates the derivative of the function
+     * @param grade grade of the derivative
+     * @returns the derivative of the function
+     */
+    derivative(grade) {
+        return new ExponentialFunction();
+    }
 }

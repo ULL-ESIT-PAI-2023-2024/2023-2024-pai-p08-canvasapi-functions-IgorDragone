@@ -26,16 +26,11 @@ export class View {
         this.scale = scale;
     }
     /**
-     * Draws the grid in the canvas
+     * Draws the grid and the axis in the canvas
      */
-    drawGrid() {
+    drawView() {
         const grid = new Grid(this.scale);
         grid.drawGrid(View.context);
-    }
-    /**
-     * Draws the axis in the canvas
-     */
-    drawAxis() {
         const axis = new Axis(this.scale);
         axis.drawAxis(View.context);
         axis.drawNumbersInAxis(View.context);

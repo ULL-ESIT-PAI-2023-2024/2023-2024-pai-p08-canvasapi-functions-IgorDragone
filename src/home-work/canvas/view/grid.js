@@ -25,12 +25,14 @@ export class Grid {
      * Draws the grid in the canvas
      */
     drawGrid(context) {
-        const STROKE_STYLE = 'lightgray';
+        const STROKE_STYLE = 'black';
         const LINE_WIDTH = 0.5;
         context.strokeStyle = STROKE_STYLE;
         context.lineWidth = LINE_WIDTH;
+        context.setLineDash([5, 3]);
         this.drawHorizontalLines(context);
         this.drawVerticalLines(context);
+        context.setLineDash([0, 0]);
     }
     /**
      * Draws the vertical lines in the canvas

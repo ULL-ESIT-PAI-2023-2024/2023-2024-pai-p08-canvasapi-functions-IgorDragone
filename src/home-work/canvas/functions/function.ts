@@ -25,6 +25,11 @@ export abstract class Function implements Drawable {
    */
   abstract evaluate(point: number): number;
 
+  /*
+   * Draws the function in the canvas
+   */
+  abstract derivative(grade: number): Function;
+
   /**
    * Draws the function in the canvas
    */

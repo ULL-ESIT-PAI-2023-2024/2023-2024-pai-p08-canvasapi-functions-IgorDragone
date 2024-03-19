@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["./*.ts", "./**/*.ts"],
+  "out": "./docs"
+}

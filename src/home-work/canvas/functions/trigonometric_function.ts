@@ -21,6 +21,19 @@ export class SinFunction extends Function {
   evaluate(point: number): number {
     return Math.sin(point);
   }
+
+  /**
+   * Calculates the derivative of the function
+   * @param grade grade of the derivative
+   * @returns the derivative of the function
+   */
+  derivative(grade: number): Function {
+    if (grade === 1) {
+      return new CosFunction();
+    } else {
+      return new CosFunction().derivative(grade - 1);
+    }
+  }
 }
 
 /**
@@ -32,5 +45,18 @@ export class CosFunction extends Function {
    */
   evaluate(point: number): number {
     return Math.cos(point);
+  }
+
+  /**
+   * Calculates the derivative of the function
+   * @param grade grade of the derivative
+   * @returns the derivative of the function
+   */
+  derivative(grade: number): Function {
+    if (grade === 1) {
+      return new SinFunction();
+    } else {
+      return new SinFunction().derivative(grade - 1);
+    }
   }
 }

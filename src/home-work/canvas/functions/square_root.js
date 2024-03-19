@@ -19,4 +19,17 @@ export class SquareRootFunction extends Function {
     evaluate(point) {
         return Math.sqrt(point);
     }
+    /**
+     * Calculates the derivative of the function
+     * @param grade grade of the derivative
+     * @returns the derivative of the function
+     */
+    derivative(grade) {
+        if (grade === 0) {
+            return this;
+        }
+        else {
+            return new SquareRootFunction();
+        }
+    }
 }
